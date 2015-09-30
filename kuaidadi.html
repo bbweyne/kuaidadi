@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <title>快的打车 | 打车神器 - 全国最大的手机智能打车软件</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="快的打车,打车软件,打的,打车app,手机打车,用车,打车神器,叫车" />
+  <meta name="description" content="快的打车，打车神器，最好用的打车App，国内最大的智能打车平台。覆盖包括香港、拉萨在内的全国360个城市，日均订单超过数百万。提供iOS和Android等多平台兼容，让乘客随时随地打到车，司机轻轻松松多赚钱。" />
+  
+
+  <script src="./kuaidadi/jquery.min.js"></script>
+
+  
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+<style>
+body {
+    font-family: 'microsoft yahei', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+}
+body,html{min-height: 100%;}
+body {
+    margin: 0;
+}
+
+#p2{ background-color:#fff;}
+#p2 img{ width:100%;}
+
+
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 1170px;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+
+.container:after {
+  clear: both;
+}
+
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+
+.container:after {
+  clear: both;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+#playbox ul li{ margin-left:200px; color:#39b44a; font-size:24px;}
+
+  
+</style>
+ </head>
+ <body>
+
+  
+  
+  <section id="p2" class="fade-it">
+   <div class="container">
+		<div id="playbox" class="clearfix">
+			 <div class="clientbox pull-right">
+				  <div class="title"></div>
+				  <div class="info"></div>
+				  <div class="show-image"></div>
+			 </div>
+			 <div class="phonebox pull-left">
+				  <div class="phonebox-window"></div>
+			 </div>
+			 <div class="tip-top"></div>
+			 <div class="tip-bot"></div>
+			 <div class="finger"></div>
+		</div>
+   </div>
+  </section>  
+
+  <script src="./kuaidadi/animate.js"></script>
+
+
+<!-- 学习
+<script>
+jQuery(function(){
+	//alert('ddd');
+	var K = function(){
+		this.ps = [];
+		this.p = $('#p2');
+		this.playBox = this.p.find('#playbox');
+		this.clientBox = this.p.find('.clientbox');
+		this.title = this.p.find('.title');
+		this.info = this.p.find('.info');
+		this.showImage = this.p.find('.show-image');
+		this.phoneBox = this.p.find('.phonebox');
+		this.phoneboxWindow = this.p.find('.phonebox-window');
+		this.tipTop = this.p.find('.tip-top');
+		this.tipBot = this.p.find('.tip-bot');
+		this.finger = this.p.find('.finger');
+		this.delaytime = 3000;
+
+		this.play();
+	};
+
+	K.prototype.play = function(){
+		this.install();
+		this.playStep1(function(){
+			this.playStep2(function(){
+					this.playStep3(function(){
+						this.playStep4(function(){
+							this.playStep5(function(){
+								this.playStep6(function(){
+									//循环
+									var that = this;
+									setTimeout(function(){
+										that.showImage.empty();
+										that.play();
+									}, 6000);
+								});
+							});
+						});
+					});
+			});
+		});
+	}
+
+	K.prototype.install = function(){
+		this.clientBox.css({
+			'zIndex':'1',
+			"width":"639",
+		});
+		this.playBox.css({ position: 'relative' }).parent().css('padding-top', '100px');
+		this.phoneBox.css({
+			"width" : "501",
+			"height" : "820",
+			"position" : "relative",
+		    "background" : "url('./kuaidadi/p1.png')",
+		});
+		this.phoneboxWindow.css({
+			width: '261px',
+			height: '460px',
+			background: '#fff',
+			position: 'absolute',
+			top: '91px',
+			left: '214px'
+		});
+		this.title.css({
+			'text-align': 'center',
+			color: '#444444',
+			'font-size': '56px'
+		});
+		this.info.css('height', '150px');
+	}
+
+	K.prototype.playStep1 = function(callback){
+		this.phoneboxWindow.css({
+			background: "url('./kuaidadi/z1.png')"
+		});
+		this.title.html('多种叫车方式');
+		this.showImage.append('<img src="./kuaidadi/p2.png">');
+		callback.call(this);
+	}
+
+	K.prototype.playStep2 = function(callback){
+		var that = this;
+		setTimeout(function(){
+			that.finger.show().css({
+				background: "url('./kuaidadi/p3.png')",
+				width: '419px',
+				height: '334px',
+				position: 'absolute',
+				bottom: '0px',
+				left: '200px',
+				zIndex: '99'
+			});
+			callback.call(that);
+		}, that.delaytime);
+	}
+
+	K.prototype.playStep3 = function(callback){
+		var that = this;
+		setTimeout(function(){
+			that.phoneboxWindow.hide('fast');
+			that.finger.fadeOut('fast');
+			that.info.html('<ul><li>一键打车</li></ul>');
+			callback.call(that);
+		}, 1000);
+	}
+
+	K.prototype.playStep4 = function(callback){
+		var that = this;
+		setTimeout(function(){
+			that.finger.fadeIn('fast');
+			callback.call(that);
+		}, 2000);
+	}
+
+	K.prototype.playStep5 = function(callback){
+		var that = this;
+		setTimeout(function(){
+			that.phoneboxWindow.show('fast');
+			that.finger.fadeOut('fast');
+			callback.call(that);
+		}, 1000);
+	}
+
+	K.prototype.playStep6 = function(callback){
+		var that = this;
+		setTimeout(function(){
+			that.finger.fadeIn('fast', function(){
+				that.finger.animate({
+					left:'300px',
+				},'normal', function(){
+					callback.call(that);
+				});
+			});
+		}, 1000);
+	}
+    
+	new K();
+});
+</script>
+-->
+ 
+ </body>
+</html>
