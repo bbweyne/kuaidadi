@@ -9,7 +9,7 @@
   <meta name="description" content="快的打车，打车神器，最好用的打车App，国内最大的智能打车平台。覆盖包括香港、拉萨在内的全国360个城市，日均订单超过数百万。提供iOS和Android等多平台兼容，让乘客随时随地打到车，司机轻轻松松多赚钱。" />
   
 
-  <script src="./kuaidadi/jquery.min.js"></script>
+  <script src="./jquery.min.js"></script>
 
   
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -115,7 +115,7 @@ ul, ol {
    </div>
   </section>  
 
-  <script src="./kuaidadi/animate.js"></script>
+  <script src="./animate.js"></script>
 
 
 <!-- 学习
@@ -172,7 +172,7 @@ jQuery(function(){
 			"width" : "501",
 			"height" : "820",
 			"position" : "relative",
-		    "background" : "url('./kuaidadi/p1.png')",
+		    "background" : "url('./img/p1.png')",
 		});
 		this.phoneboxWindow.css({
 			width: '261px',
@@ -192,10 +192,10 @@ jQuery(function(){
 
 	K.prototype.playStep1 = function(callback){
 		this.phoneboxWindow.css({
-			background: "url('./kuaidadi/z1.png')"
+			background: "url('./img/z1.png')"
 		});
 		this.title.html('多种叫车方式');
-		this.showImage.append('<img src="./kuaidadi/p2.png">');
+		this.showImage.append('<img src="./img/p2.png">');
 		callback.call(this);
 	}
 
@@ -203,7 +203,7 @@ jQuery(function(){
 		var that = this;
 		setTimeout(function(){
 			that.finger.show().css({
-				background: "url('./kuaidadi/p3.png')",
+				background: "url('./img/p3.png')",
 				width: '419px',
 				height: '334px',
 				position: 'absolute',

@@ -33,7 +33,7 @@
 	KDANIMATE.prototype.loadImages = function(type, i, callback){
 		if ( i < this[type] ){
 			var that = this;
-			this.loadSingleImage(type, './kuaidadi/' + type + (i + 1) + '.png', function(){
+			this.loadSingleImage(type, './img/' + type + (i + 1) + '.png', function(){
 				that.loadImages(type, i + 1, callback);
 			});
 		}else{
@@ -48,7 +48,7 @@
 		this.phoneBox.css({
 			width: '501px',
 			height: '820px',
-			background: "url('./kuaidadi/p1.png')",
+			background: "url('./img/p1.png')",
 			position: 'relative',
 			zIndex: '2'
 		});
@@ -126,7 +126,7 @@
 	KDANIMATE.prototype.step1 = function(callback){
 
 		this.phoneWindow.css({
-			background: "url('./kuaidadi/z1.png')"
+			background: "url('./img/z1.png')"
 		});
 		this.title.html('多种叫车方式');
 		this.showImage.append(this.ps[1]);
@@ -137,7 +137,7 @@
 	KDANIMATE.prototype.step2 = function(callback){
 		this.delay(function(){
 			this.finger.show().css({
-				background: "url('./kuaidadi/p3.png')",
+				background: "url('./img/p3.png')",
 				width: '419px',
 				height: '334px',
 				position: 'absolute',
@@ -191,11 +191,11 @@
 	KDANIMATE.prototype.step7 = function(callback){
 		this.delay(function(){
 			this.phoneWindow.css({
-				background: "#fff url('./kuaidadi/z2.png')"
+				background: "#fff url('./img/z2.png')"
 			});
 			this.finger.fadeOut('fast');
 			this.tipTop.show().css({
-				background: "url('./kuaidadi/p4.png')",
+				background: "url('./img/p4.png')",
 				width: '342px',
 				height: '244px',
 				position: 'absolute',
@@ -213,7 +213,7 @@
 		this.delay(function(){
 			this.tipTop.fadeOut('fast', function(){
 				that.tipBot.css({
-					background: "url('./kuaidadi/p5.png')",
+					background: "url('./img/p5.png')",
 					width: '349px',
 					height: '249px',
 					position: 'absolute',
@@ -231,15 +231,15 @@
 		var that = this;
 		this.delay(function(){
 			that.tipBot.show().css({
-					background: "url('./kuaidadi/p6.png')"
+					background: "url('./img/p6.png')"
 			});
 			setTimeout(function(){
 				that.tipBot.css({
-						background: "url('./kuaidadi/p5.png')"
+						background: "url('./img/p5.png')"
 				});
 				setTimeout(function(){
 					that.tipBot.css({
-							background: "url('./kuaidadi/p6.png')"
+							background: "url('./img/p6.png')"
 					});
 					callback.call(that);
 				}, 500);
@@ -252,7 +252,7 @@
 		this.delay(function(){
 			that.tipBot.fadeOut('fast', function(){
 				that.finger.show().css({
-					background: "url('./kuaidadi/p7.png')",
+					background: "url('./img/p7.png')",
 					width: '627px',
 					height: '700px',
 					left: '411px'
@@ -267,7 +267,7 @@
 		this.delay(function(){
 			that.finger.fadeOut('fast', function(){
 				that.phoneWindow.css({
-					background: "#fff url('./kuaidadi/z3.png')"
+					background: "#fff url('./img/z3.png')"
 				});
 				callback.call(that);
 			});
@@ -279,11 +279,11 @@
 		var that = this;
 		this.delay(function(){
 			this.phoneWindow.css({
-				background: "#fff url('./kuaidadi/z1.png')"
+				background: "#fff url('./img/z1.png')"
 			});
 			that.info.html('<ul><li>一键打车</li><li>文字发单 语音发单</li><li>预约叫车</li></ul>');
 			this.finger.css({
-				background: "url('./kuaidadi/p3.png')",
+				background: "url('./img/p3.png')",
 				width: '419px',
 				height: '334px',
 				position: 'absolute',
@@ -300,7 +300,7 @@
 		var that = this;
 		this.delay(function(){
 			this.phoneWindow.css({
-				background: "#fff url('./kuaidadi/z4.png')"
+				background: "#fff url('./img/z4.png')"
 			});
 			this.finger.fadeOut('fast', function(){
 				callback.call(that);
@@ -321,7 +321,7 @@
 		var that = this;
 		this.delay(function(){
 			this.phoneWindow.css({
-				background: "#fff url('./kuaidadi/z3.png')"
+				background: "#fff url('./img/z3.png')"
 			});
 			this.title.html('一切尽在掌握');
 			this.info.html('<ul><li>实时查看司机位置</li></ul>');
@@ -337,7 +337,7 @@
 		var that = this;
 		this.delay(function(){
 			this.phoneWindow.css({
-				background: "#fff url('./kuaidadi/z5.png')"
+				background: "#fff url('./img/z5.png')"
 			});
 			this.title.html('从此告别零钱');
 			this.info.html('<ul><li>在线付车费</li></ul>');
@@ -351,7 +351,7 @@
 		var that = this;
 		this.delay(function(){
 			this.phoneWindow.css({
-				background: "#fff url('./kuaidadi/z6.png')"
+				background: "#fff url('./img/z6.png')"
 			});
 			this.title.html('玩转积分商城');
 			this.info.html('');
